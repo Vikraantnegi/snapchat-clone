@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useRef} from 'react'
 import Webcam from 'react-webcam'
 
 const Constraints = {
@@ -8,10 +8,16 @@ const Constraints = {
 }
 
 function WebCamCapture() {
+    const webCamRef = useRef(null);
     return (
         <div className="webCamCapture">
             <Webcam 
-                
+                audio={false}
+                height={Constraints.height}
+                ref={webCamRef}
+                screenshotFormat="image/jpeg"
+                width={Constraints.width}
+                videoConstraints={Constraints}
             />
         </div>
     )
