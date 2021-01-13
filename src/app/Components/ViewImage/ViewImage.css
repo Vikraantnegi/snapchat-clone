@@ -5,7 +5,7 @@
     position: absolute;
     top: 0;
     margin: 5px !important;
-    font-size: 20px !important;
+    font-size: 18px !important;
     color: white;
     cursor: pointer;
 }
@@ -13,11 +13,34 @@
     display: flex;
     flex-direction: column;
     color: white;
-    font-size: 18px !important;
     position: absolute;
     right: 0;
-    margin: 5px !important;
+    margin: 5px 10px !important;
 }
 .toolBar .MuiSvgIcon-root{
-    margin-bottom: 5px !important;
+    margin-bottom: 7px !important;
+    font-size: 20px !important;
+    cursor: pointer;
+}
+.snap-footer{
+    background-color: yellow;
+    color: black;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 7px;
+    justify-content: space-evenly;
+    border-radius: 30px;
+    cursor: pointer;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 20px !important;
+}
+.snap-footer h2{
+    font-size: 8px;
+    margin-right: 3px !important;
+}
+.send-icon{
+    font-size: 10px !important;
 }
