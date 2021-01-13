@@ -21,9 +21,9 @@ function WebCamCapture() {
         () => {
             const imageSource = webCamRef.current.getScreenshot();
             dispatch(updateImage(imageSource));
-            history.push('/preview');
+            history.push('/view');
         },
-        [webCamRef],
+        [],
     )
     
     return (

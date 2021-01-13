@@ -1,21 +1,36 @@
 import React, {useEffect} from 'react';
 import './ViewImage.css';
-import { useSelector } from 'react-redux';
-import { selectImage } from '../../../features/cameraSlice';
+import { useDispatch, useSelector } from 'react-redux';
+import { resetImage, selectImage } from '../../../features/cameraSlice';
 import { useHistory } from 'react-router-dom';
-import { Close } from '@material-ui/icons';
+import { AttachFile, Close, Create, Crop, MusicNote, Note, TextFields, Timer } from '@material-ui/icons';
 
 function ViewImage() {
     const Image = useSelector(selectImage); 
     const history = useHistory();
+    const dispatch = useDispatch();
     useEffect(() => {
         if(!Image){
             history.replace('/');
         }
-    }, [Image, history])
+    }, [Image, history]);
+
+    const closeView = () => {
+        dispatch(resetImage());
+    }
+
     return (
         <div className="view-image">
-            <Close className="close-icon" />
+            <Close onClick={() => closeView()} className="close-icon" />
+            <div className="toolBar">
+                <TextFields />
+                <Create />
+                <Note />
+                <MusicNote />
+                <AttachFile />
+                <Crop />
+                <Timer />
+            </div>
             <img src={Image} alt="cameraimage" />
         </div>
     )

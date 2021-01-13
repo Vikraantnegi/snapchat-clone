@@ -1,0 +1,23 @@
+.view-image{
+    position: relative;
+}
+.close-icon{
+    position: absolute;
+    top: 0;
+    margin: 5px !important;
+    font-size: 20px !important;
+    color: white;
+    cursor: pointer;
+}
+.toolBar{
+    display: flex;
+    flex-direction: column;
+    color: white;
+    font-size: 18px !important;
+    position: absolute;
+    right: 0;
+    margin: 5px !important;
+}
+.toolBar .MuiSvgIcon-root{
+    margin-bottom: 5px !important;
+}
